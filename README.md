@@ -8,15 +8,21 @@ Installation is simple via Ruby Gems. [Compass](http://compass-style.org/) and [
 
     gem install compass-rgbapng
 
-## Using rgbapng with your Compass project
+## Using rgbapng with your Compass project and Rails 3.1
 
-To use rgbapng with your project, require the plugin from your Compass configuration:
+To use rgbapng with your Rails 3.1 project, add the following to your `application.rb`:
 
-    require "rgbapng"
+    config.assets.paths << "#{Gem.loaded_specs['compass-rgbapng'].full_gem_path}/lib/"
 
 And then import the mixins to your SASS/SCSS files:
 
     @import "rgbapng";
+
+### If you're on <= Rails 3.0.x
+
+To use rgbapng with your <= Rails 3.0 project, require the plugin from your Compass configuration:
+
+    require "rgbapng"
 
 ### Configurable variables
 
